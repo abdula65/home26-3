@@ -1,49 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
- body {
-        background: url("https://static.vecteezy.com/system/resources/previews/001/849/553/original/modern-gold-background-free-vector.jpg");
-        color: aliceblue;
-        font-size: 24px;
-        font-family: "Arial Narrow";
+body {
+    background: url("https://static.vecteezy.com/system/resources/previews/001/849/553/original/modern-gold-background-free-vector.jpg");
+    color: aliceblue;
+    font-size: 24px;
+    font-family: "Arial Narrow";
+}
+h1{
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+.container {
+    max-width: 960px;
+    margin: 50px auto;
+    padding: 0 15px;
+    background: white;
+}
+.post-image {
+    margin: 20px 0;
+    padding: 30px 0;
+    position: relative;
+}
+.post-image:before {
+    content: "";
+    position: absolute;
+    border: 6px solid #D01916;
+    top: 10px;
+    bottom: 10px;
+    left: 35%;
+    right: 35%;
+}
+.post-image img {
+    width: 100%;
+}
+.post h1 {
+    color: #222;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.post-meta {
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .8em;
+}
+time,
+.author {
+    padding-right: 26px;
+    position: relative;
+}
+time:after,
+.author:after {
+    content: "";
+    background: #DDDDDF;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    transform: translateY(-50%) rotate(45deg);
+}
+p {
+    line-height: 1.5;
+    margin-bottom: 1em;
+    text-align: justify;
+}
+@media (min-width: 768px) {
+    body {
+        font-size: 16px;
     }
-    h1{
-        font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    .container {
+        padding: 0 45px;
     }
-    a {
-        text-decoration: none;
-        color:black;
+    .post-image,
+    .post h1 {
+        text-align: center;
     }
-    button {
-        padding: 10px;
-        background: #3f87a6;
-        border-radius: 10px;
+    .post-image img {
+        width: 70%;
     }
-    button:hover{
-     background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
-     border: none;
-    color: #FFFFFF;
-    padding: 15px 20px;
-     transition: 0.5s;
-     border-radius: 250px;
-    }
-</style>
-<button><a href="/Сar_list/">На список машин</a></button>
-<div>
-<center>
-    <h1>{{Car_detail.title}}</h1>
-    <img src="{{Сar_detail.image.url}}" alt="" width="700" height="auto">
-    <p><i>Последнее обновление: {{Сar_detail.created_data}}</i></p>
-    <h2>Тип кузова: {{Сar_detail.car_type}}</h2>
-    <p>{{Сar_detail.description}}</p>
-    <h2>Цена: {{Car_detail.cost}}$</h2>
-    <p><i>Подробнее об машине можете найти в этом ролике</i></p>
-    <iframe src="{{Сar_detail.video}}" frameborder="0" width="800" height="400"></iframe>
-</center>
-</div>
-</body>
-</html>
+}
