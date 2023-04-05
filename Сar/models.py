@@ -31,7 +31,7 @@ class CarReview(models.Model):
         ('*****', '*****')
     )
 
-    car_review = models.ForeignKey(Car, on_delete=models.CASCADE, related_name="comment_object", null=True)
+    car_review = models.ForeignKey(сar, on_delete=models.CASCADE, related_name="comment_object", null=True)
     text = models.TextField(null=True)
     rate_stars = models.CharField(max_length=100, choices=RATINGS, default=False)
     created_date = models.DateTimeField(auto_now_add=True, null=True)
