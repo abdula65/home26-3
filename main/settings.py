@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'book',
     'Сar',
     'parser_app',
+    'custom_users',
 ]
 
 MIDDLEWARE = [
