@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'Сar',
     'parser_app',
     'custom_users',
+    'cloth',
 ]
 
 MIDDLEWARE = [
